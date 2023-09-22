@@ -1,0 +1,183 @@
+@import "../../../scss/media.scss";
+@import "../../../scss/variable.scss";
+
+#header {
+    position: relative;
+    border-bottom: 1px solid #edededed;
+
+    .container {
+        max-width: 1280px;
+        margin: auto;
+        padding: 10px 15px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            cursor: pointer;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                max-width: 100px;
+                object-fit: contain;
+            }
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .nav_links {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Roboto";
+            }
+        }
+
+        .nav_right_icons {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 60px;
+
+            .cart_icon {
+                button {
+                    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                    display: flex;
+                    border-radius: 50%;
+                    padding: 8px;
+                    background-color: #f3f5f9;
+                    border: 0px;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+            }
+
+            .register_icon {
+                .avatar {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    row-gap: 3px;
+
+                    .avatar_image {
+                        cursor: pointer;
+
+                        img {
+                            object-fit: cover;
+                            width: 55px;
+                            height: 55px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .user_name {
+                        font: 800 12px "Roboto";
+                    }
+
+                    .user_dropdown {
+                        position: absolute;
+                        z-index: 11;
+                        top: 52px;
+                        right: 0px;
+                        background: rgb(255, 255, 255);
+                        box-shadow: 0px 8px 45px rgba(3, 0, 71, 0.09);
+                        border-radius: 8px;
+                        width: 220px;
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+
+
+                            a,
+                            .logout {
+                                width: 100%;
+                                height: 100%;
+                                padding: 15px 10px;
+                                border-bottom: 1px solid #ededed;
+                                cursor: pointer;
+
+                              
+
+
+                                &:hover {
+                                    background-color: #00000005;
+                                }
+
+                                li {
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: start;
+                                    font: 800 15px "Roboto";
+                                    color: #707072;
+                                    flex-direction: row-reverse;
+                                    gap: 10px;
+
+                                    .icon {
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        svg {
+                                            font-size: 20px;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 9px 22px 10px;
+                    height: 100%;
+                    cursor: pointer;
+                    background: #f3f5f9;
+                    color: black;
+                    font-family: "Roboto";
+                    font-weight: 600;
+                    border: 1px solid rgba(197, 197, 197, 0.93);
+                }
+            }
+        }
+
+        .nav_mid_search {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mobile {
+                position: absolute;
+                top: 0px;
+                height: 100vh;
+                z-index: 11;
+                background: white;
+                transform: translateY(-100vh);
+                transition: all 0.5s ease-in-out;
+                overflow: hidden;
+            }
+        }
+    }
+}

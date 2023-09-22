@@ -1,0 +1,61 @@
+@import "../../../scss/media.scss";
+@import "../../../scss/variable.scss";
+
+#footer {
+    position: relative;
+    background: steelblue;
+
+    .container {
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px;
+
+        .left_footer {
+            .logo {
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .mid_footer {
+          p{
+            font-family: 'Roboto';
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px; 
+          }
+        }
+
+        .right_footer {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: white;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                background: white;
+                border-radius: 50%;
+
+                svg {
+                    color: #707072;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../../scss/variable.scss";
+@import "../../../scss/media.scss";
+
+
+.review_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    border: 1px solid #ededde;
+    padding: 20px 10px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    max-width: 285px;
+
+    @media (max-width:1000px) {
+        // max-width: 260px;
+
+    }
+
+    @include mobile {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .review_user_image {
+        img {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+
+    .review_user_name {
+        text-transform: capitalize;
+        font: 700 15px "Roboto";
+        color: #2B3445;
+    }
+
+    .review_user_comment {
+        text-transform: capitalize;
+        font: 500 14px "Roboto";
+        color: #2B3445;
+    }
+}

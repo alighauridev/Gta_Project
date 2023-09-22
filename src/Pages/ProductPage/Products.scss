@@ -1,0 +1,191 @@
+@import "../../scss/media.scss";
+@import "../../scss/variable.scss";
+
+//Products
+#productPage {
+  position: relative;
+  overflow: hidden;
+  background-color: #f6f6f6;
+
+  .products_heading {
+    width: 100%;
+    padding: 90px 15px 0px;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 20%;
+      height: 2px;
+      background: #2b344587;
+      z-index: 1;
+      border-radius: 30px;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    h1 {
+      font: 900 40px "Roboto";
+      color: #2b3445;
+    }
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 90px 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 5fr;
+    gap: 30px;
+
+    .products_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      grid-gap: 30px;
+      position: relative;
+
+      @include md {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
+      .products_not_found {
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        h1 {
+          font: 700 30px "Roboto";
+        }
+      }
+    }
+  }
+
+  .products_pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0px 60px;
+  }
+}
+
+//ProductSidebar
+#productSidebar {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .sidebar {
+    background: white;
+    width: 100%;
+    height: 100%;
+    max-height: 300%;
+
+    max-width: 100%;
+
+    .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+      font-size: 14px !important;
+    }
+
+    .css-vqmohf-MuiButtonBase-root-MuiRadio-root {
+      padding: 7.5px !important;
+    }
+
+    .title {
+      color: black;
+      font: 300 18px "Roboto";
+      text-transform: capitalize;
+      font-family: sans-serif;
+    }
+
+    .sidebar_heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #d7d6d6b5;
+      padding: 10px 15px;
+
+      h1 {
+        color: #2b3445;
+        font: 600 22px "Roboto";
+        text-transform: capitalize;
+      }
+
+      span {
+        color: #2b3445;
+        font: 600 14px "Roboto";
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+    }
+
+    .sidebar_slider {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      padding: 15px 15px;
+      border-bottom: 1px solid #d7d6d6b5;
+
+      .slider_value_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        font: 400 15px "Roboto";
+        font-family: sans-serif;
+        margin: 10px 0 5px;
+
+        span {
+          max-width: 75px;
+          padding: 6px 5px;
+          width: 100%;
+          text-align: center;
+          background: #f9fafb;
+          font: 400 15px "Roboto";
+          border: 1px solid rgba(215, 214, 214, 0.7098039216);
+        }
+      }
+
+
+    }
+
+    .sidebar_categories {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 15px;
+      border-bottom: 1px solid rgba(215, 214, 214, 0.7098039216);
+
+      .sidebar_category_heading {
+        color: black;
+        font: 300 18px "Roboto";
+        text-transform: capitalize;
+        font-family: sans-serif;
+      }
+    }
+
+    .sidebar_ratings {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      row-gap: 4px;
+    }
+  }
+
+
+}

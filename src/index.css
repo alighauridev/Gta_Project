@@ -1,0 +1,26 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+@font-face {
+  font-family:"Roboto" ;
+  src: url(../src/scss/font/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+  font-family:"Roboto_Bold" ;
+  src: url(../src/scss/font/Poppins/Poppins-Bold.ttf);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  overflow: auto !important;
+}

@@ -1,0 +1,295 @@
+
+
+.input_wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .input_box {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        row-gap: 5px;
+        width: 100%;
+
+        .input_title {
+            font: 700 16px "Roboto";
+        }
+
+        .input_main {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            height: 45px;
+            justify-content: start;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid rgb(197 197 197 / 93%);
+
+            .input_icon_right {
+                position: absolute;
+                left: 7px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    color: #2B3445 !important;
+                    font-size: 22px !important;
+                }
+            }
+
+            .input_icon_left {
+                position: absolute;
+                right: 7px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    position: relative;
+                    border-radius: 50%;
+                    padding: 6px;
+                    cursor: pointer;
+                    outline: none;
+                    border: 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all ease-in-out 0.5s;
+                    background-color: transparent;
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.04);
+                    }
+
+                    svg {
+                        color: rgba(0, 0, 0, 0.54);
+                        font-size: 18px;
+                    }
+                }
+
+            }
+
+
+
+
+            input {
+                padding: 0px 5px 0px 36px;
+                text-align: start;
+                border: 0px;
+                outline: none;
+                height: 100%;
+                width: 100%;
+                font-size: 15px;
+                font-family: "Roboto";
+                color: black;
+
+                &::placeholder {
+                    font-family: "Roboto";
+
+                }
+            }
+        }
+
+        .input_error {
+            font: 200 13px "Roboto";
+            font-family: sans-serif;
+            color: #d23f57;
+            margin-top: 5px;
+            width: 100%;
+            text-align: start;
+        }
+    }
+
+
+
+
+
+}
+
+
+//Search Style
+.search_wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+
+    .search_box {
+
+        width: 100%;
+
+        .search_input_main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 1px solid rgb(197 197 197 / 93%);
+            width: 100%;
+            overflow: hidden;
+            border-radius: 5px;
+
+            input {
+                border: 0px;
+                outline: none;
+                height: 100%;
+                width: 100%;
+                padding: 10px 15px;
+                font-size: 15px;
+                font-family: 'Roboto';
+                color: black;
+            }
+
+            .search_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 12px 10px;
+                height: 100%;
+                cursor: pointer;
+                background: #707072;
+
+                svg {
+                    color: white;
+                    font-size: 26px;
+
+                }
+            }
+        }
+    }
+}
+
+
+//Quanity Style 
+
+.quanity_box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 0.3fr 0.1fr 0.3fr;
+
+    button {
+        color: #D23F57;
+        background: transparent;
+        font-weight: 600;
+        padding: 6px;
+        border: 1px solid;
+        font-size: 25px;
+        max-width: 100%;
+        width: 48px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        outline: none;
+        max-width: 100%;
+        font: 700 22px "Roboto";
+        color: #2B3445;
+    }
+}
+
+
+//Submit Style
+
+.submit_wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .submit_box {
+        width: 100%;
+        background: rgb(210, 63, 87);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        margin-top: 15px;
+        transition: all 0.3s ease-in-out;
+
+        input {
+            width: 100%;
+            border: 0px;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            text-transform: capitalize;
+            font: 200 18px "Roboto";
+            font-family: sans-serif;
+            padding: 15px 10px;
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+.uploadImage_wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .avatar_image {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        img {
+            object-fit: cover;
+            width: 60px;
+            border-radius: 100%;
+            height: 60px;
+        }
+    }
+
+    .uploadImage_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+
+        .avatar_button {
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+
+            input::file-selector-button {
+                width: 100%;
+                // height: 30px;
+                cursor: pointer;
+                font: 300 16px "Roboto";
+                border: 1px solid rgba(197, 197, 197, 0.93);
+                outline: none;
+                padding: 10px 10px;
+                border-radius: 4px;
+
+            }
+
+            .input_error {
+                font: 200 13px "Roboto";
+                font-family: sans-serif;
+                color: #d23f57;
+                margin-top: 5px;
+                width: 100%;
+                text-align: start;
+            }
+        }
+    }
+}

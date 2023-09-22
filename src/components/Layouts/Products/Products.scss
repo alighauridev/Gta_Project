@@ -1,0 +1,182 @@
+@import "../../../scss/media.scss";
+@import "../../../scss/variable.scss";
+
+//Products
+#products {
+    position: relative;
+    overflow: hidden;
+    background-color: #F6F6F6;
+
+    .container {
+        max-width: 1280px;
+        margin: auto;
+        padding: 90px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 90px;
+        width: 100%;
+
+        .products_heading {
+            width: 100%;
+            padding: 10px 0px;
+            position: relative;
+            text-align: center;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                width: 20%;
+                height: 2px;
+                background: #2b344587;
+                z-index: 1;
+                border-radius: 30px;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+
+            h1 {
+                font: 900 40px "Roboto";
+                color: #2b3445;
+            }
+        }
+
+        .products_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 100%;
+            grid-gap: 30px;
+
+            @include lg {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .MuiSkeleton-rectangular {
+                max-width: 300px;
+                width: 100%;
+                height: 250px;
+            }
+        }
+    }
+}
+
+//Product Card
+
+.product_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    row-gap: 10px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 0 6px 2px #ededed;
+    padding-bottom: 20px;
+    cursor: pointer;
+    max-width: 300px;
+    height: 336px;
+
+    @include mobile {
+        max-width: 270px;
+
+    }
+
+    &:hover>.product_image>img {
+        transform: scale(1.1);
+    }
+
+    .product_image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            transition: all 0.2s ease-in;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            max-width: 300px;
+
+
+
+        }
+    }
+
+    .product_title {
+        color: #2B3445;
+        font: 600 20px "Roboto";
+        text-transform: capitalize;
+        margin-bottom: 0px;
+        margin-top: 0px;
+
+        white-space: normal;
+    }
+
+    .product_ratings {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .product_numOfReviews {
+            color: #2B3445;
+            font: 700 13px "Roboto";
+
+        }
+    }
+
+    .product_price {
+        color: #2B3445;
+        font: 700 15px "Roboto";
+        margin-bottom: 0px;
+        margin-top: 0px;
+        text-transform: none;
+        white-space: normal;
+    }
+}
+
+//ProductSkeleton
+
+.product_skeleton {
+
+    position: relative;
+    overflow: hidden;
+    row-gap: 10px;
+    max-width: 300px;
+    height: 336px;
+    width: 100%;
+
+    @include mobile {
+        width: 270px;
+    }
+
+
+    .product_image {
+        position: relative;
+        overflow: hidden;
+
+
+    }
+
+    .product_title {
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+    .product_price {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,93 @@
+@import "../../../scss/media.scss";
+@import "../../../scss/variable.scss";
+
+
+#banner {
+    position: relative;
+    overflow: hidden;
+
+    .container_wrapper {
+        width: 100%;
+        background-color: aliceblue;
+
+        .container {
+            max-width: 1280px;
+            margin: auto;
+            padding: 15px 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @include md {
+                grid-template-columns: 1fr;
+            }
+
+
+            .banner_info {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+
+                .banner_heading {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+
+                    h1 {
+                        font-size: 50px;
+                        margin-top: 0;
+                        line-height: 1.2;
+                        color: #2B3445;
+                        font-family: "Roboto_Bold";
+                        max-width: 300px;
+                        margin-bottom: 1.35rem;
+                    }
+
+                    p {
+                        margin-bottom: 21.6px;
+                        margin-top: 0px;
+                        font-size: 14px;
+                        color: #0F3460;
+                        text-transform: none;
+                        white-space: normal;
+                        font-family: "Roboto";
+                    }
+
+                    a {
+                        position: relative;
+                        width: 100%;
+
+                        button {
+                            font-weight: 600 !important;
+                            background-color: rgb(52, 52, 52) !important;
+                            color: white !important;
+                            font-family: 'Roboto' !important;
+                            padding: 10px 20px !important;
+                            max-width: 140px !important;
+                            width: 100% !important;
+
+                            &:hover {
+                                background-color: #343434;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+            .banner_image {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
